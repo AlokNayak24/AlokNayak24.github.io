@@ -22,28 +22,47 @@
     container.innerHTML = `
       <div class="cs-notfound">
         <p>Couldn't find that case study.</p>
-        <a href="index.html#ai-tools" class="btn btn-primary btn-sm" style="margin-top:20px;">Back to AI Tools</a>
+        <a href="index.html#projects" class="btn btn-primary btn-sm" style="margin-top:20px;">Back to Projects</a>
       </div>`;
   }
 
-  function render(tool) {
+  // Resolves the ?id= against both SITE_DATA.aiTools and SITE_DATA.projects,
+  // normalizing the differing field names (builtWith/tech, status/badge) so
+  // render() can treat either source the same way.
+  function resolveItem(id) {
+    if (!id || typeof SITE_DATA === "undefined") return null;
+    const tool = SITE_DATA.aiTools.find((t) => t.id === id);
+    if (tool) return { ...tool, backHref: "index.html#ai-tools", backLabel: "AI Tools" };
+    const project = SITE_DATA.projects.find((p) => p.id === id);
+    if (project) return { ...project, backHref: "index.html#projects", backLabel: "Projects" };
+    return null;
+  }
+
+  function statusMeta(item) {
+    if (item.status) return STATUS_META[item.status] || STATUS_META.Personal;
+    if (item.badge && item.badge.startsWith("Real")) return { cls: "status-production", label: item.badge };
+    return { cls: "status-personal", label: item.badge || "Project" };
+  }
+
+  function render(item) {
     const container = document.getElementById("csContent");
-    const cs = tool.caseStudy;
-    const meta = STATUS_META[tool.status] || STATUS_META.Personal;
+    const cs = item.caseStudy;
+    const meta = statusMeta(item);
+    const chips = item.builtWith || item.tech || [];
 
     if (!cs) {
       notFound(container);
       return;
     }
 
-    document.title = `${tool.title} — Case Study — Alok Kumar Nayak`;
+    document.title = `${item.title} — Case Study — Alok Kumar Nayak`;
 
     container.innerHTML = `
       <div class="cs-header">
         <span class="status-badge ${meta.cls}">${meta.label}</span>
-        <h1>${tool.title}</h1>
+        <h1>${item.title}</h1>
         <p class="cs-lede">${cs.overview}</p>
-        <div class="built-with">${tool.builtWith.map((b) => `<span class="chip">${b}</span>`).join("")}</div>
+        <div class="built-with">${chips.map((b) => `<span class="chip">${b}</span>`).join("")}</div>
       </div>
 
       ${
@@ -106,7 +125,7 @@
       }
 
       <div class="cs-cta">
-        <a href="index.html#ai-tools" class="btn btn-secondary">← Back to AI Tools</a>
+        <a href="${item.backHref}" class="btn btn-secondary">← Back to ${item.backLabel}</a>
       </div>
     `;
   }
@@ -115,7 +134,7 @@
     applySavedTheme();
     const container = document.getElementById("csContent");
     const id = new URLSearchParams(location.search).get("id");
-    const tool = id && typeof SITE_DATA !== "undefined" ? SITE_DATA.aiTools.find((t) => t.id === id) : null;
-    tool ? render(tool) : notFound(container);
+    const item = resolveItem(id);
+    item ? render(item) : notFound(container);
   });
 })();

@@ -156,7 +156,29 @@ const SITE_DATA = {
       desc: "End-to-end QA automation for a U.S. insurance management platform covering policy administration, claims processing, and CRM workflows, under strict regulatory compliance.",
       features: ["80% automation coverage", "Bi-daily regression cycles", "UI + API hybrid suite", "Regulatory-compliant validation"],
       tech: ["Selenium", "AccelQ", "Rest Assured", "TestNG"],
-      githubUrl: "https://github.com/AlokNayak24", demoUrl: "#", caseStudyUrl: "#",
+      githubUrl: "https://github.com/AlokNayak24", demoUrl: "#", caseStudyUrl: "case-study.html?id=nexsure-insurance",
+      caseStudy: {
+        overview:
+          "Nexsure is a U.S. insurance management platform handling policy administration, claims processing, and CRM workflows for agencies and carriers — a domain where a missed regression isn't just a bug, it's a compliance exposure. Coming into this engagement, my first step wasn't writing scripts; it was mapping the regulatory-sensitive workflows (policy binding, endorsements, claims lifecycle) against existing test coverage to find where risk was concentrated. That risk map became the backbone of the automation strategy — coverage was prioritized by business impact and audit exposure, not by what was easiest to script first.",
+        features: [
+          { icon: "🧭", title: "Risk-Based Test Strategy", points: ["Mapped policy, claims, and CRM workflows against regulatory exposure before writing a single script.", "Prioritized automation coverage by business impact rather than ease of scripting.", "Kept a living traceability matrix in Zephyr Scale linking requirements to test coverage."] },
+          { icon: "🧩", title: "Hybrid Automation Framework", points: ["Combined data-driven inputs with BDD-style specs so business stakeholders could read test intent directly.", "Built on the Page Object Model for maintainability as the UI evolved release over release.", "Designed to run identically across cloud and on-prem environments."] },
+          { icon: "🔗", title: "UI + API Regression Suite", points: ["Selenium WebDriver + AccelQ for UI regression across policy and claims modules.", "Rest Assured for API-level contract and data validation beneath the UI layer.", "TestNG suites organized by module for parallel execution and faster feedback."] },
+          { icon: "⚙️", title: "CI/CD Pipeline Integration", points: ["Jenkins + Maven pipelines running smoke suites on every merge and full regression on a bi-daily cadence.", "Automated failure triage funneled straight into Jira for the dev team.", "Pipeline gates tied to release readiness, not just green checkmarks."] },
+          { icon: "📡", title: "Production Monitoring", points: ["Designed a real-time monitoring layer tracking server availability and API health across critical services.", "Automatic detection of downtime, API failures, and response-time degradation.", "Instant alerts to QA and engineering for faster incident response — shifting from reactive to proactive quality."] },
+          { icon: "🤖", title: "AI-Accelerated Scripting", points: ["Used GitHub Copilot and Codex to cut test script creation time by 35% without lowering coverage standards.", "AI-assisted boilerplate generation freed up time for deeper exploratory and edge-case testing."] },
+        ],
+        impact: [
+          "80% automation coverage across UI and API regression scenarios.",
+          "30% shorter release timelines from a hybrid, parallelizable suite.",
+          "35% faster test script creation using AI coding assistants (Copilot, Codex).",
+          "Faster incident response through proactive production health monitoring.",
+          "Regulatory-compliant validation maintained across every release cycle.",
+        ],
+        techUsed: ["Selenium WebDriver", "AccelQ", "Rest Assured", "TestNG", "Jenkins", "Maven", "Zephyr Scale", "GitHub Copilot", "Codex"],
+        result:
+          "Eight years of QA experience taught me that in a regulated domain, automation coverage without a risk model is just noise — you can hit 80% coverage and still miss the 20% that matters most. On Nexsure, tying every automated scenario back to a documented business risk meant the coverage number was actually defensible in an audit conversation, not just a dashboard metric. That discipline, combined with AI-assisted scripting and proactive production monitoring, moved the team from a reactive regression cycle to a genuinely predictable release cadence.",
+      },
     },
     {
       id: "ai-copilot-scripting",
@@ -165,7 +187,27 @@ const SITE_DATA = {
       desc: "Recognizer is a unique AI solution to recognition of objects, texts, scenes, human faces and activities in images and videos, detect any inappropriate content with computer vision technology and it is enables pattern recognition or shapes to be identified. can be used across different industry verticals to enhance productivity, customer experience, reduce operating costs, increase business efficiency and improve security. offer multiple vision intelligence capabilities in one platform.",
       features: ["60% less manual testing effort", "Faster release cycles", "Reusable Page Object layer", "Team-wide AI tooling adoption"],
       tech: ["Selenium WebDriver", "GitHub Copilot", "Java", "Jenkins"],
-      githubUrl: "https://github.com/AlokNayak24", demoUrl: "#", caseStudyUrl: "#",
+      githubUrl: "https://github.com/AlokNayak24", demoUrl: "#", caseStudyUrl: "case-study.html?id=ai-copilot-scripting",
+      caseStudy: {
+        overview:
+          "Recognizer is a computer-vision platform that identifies objects, text, scenes, faces, and activity in images and video, and flags inappropriate content — used across multiple industries for security, moderation, and productivity use cases. Testing an AI/vision product is a different discipline from testing a deterministic CRUD app: correctness isn't binary, so the strategy had to account for probabilistic outputs, not just pass/fail assertions. I spent time understanding the recognition pipeline first — what confidence thresholds meant, where false positives/negatives actually hurt the business (content moderation false-negatives are a much bigger risk than a UI cosmetic bug) — before designing the test approach around that risk profile.",
+        features: [
+          { icon: "🖼️", title: "AI Output Validation", points: ["Curated diverse test media (lighting, occlusion, resolution, multiple ethnicities/ages) to stress-test recognition accuracy.", "Validated confidence-threshold behavior rather than treating detection as simple pass/fail.", "Focused extra scrutiny on the inappropriate-content classifier, where false negatives carry real business risk."] },
+          { icon: "🎭", title: "Cross-Browser UI Regression", points: ["Selenium WebDriver suite covering the upload, processing, and results-review flows across browsers.", "Regression coverage on every release to catch UI drift without slowing releases down."] },
+          { icon: "🧱", title: "Reusable Page Object Layer", points: ["Refactored ad-hoc scripts into a Page Object Model layer shared across the whole suite.", "Cut script maintenance overhead as the product's UI iterated release over release."] },
+          { icon: "🤖", title: "AI-Accelerated Scripting", points: ["Used GitHub Copilot to scaffold repetitive Selenium test scripts, freeing time for deeper exploratory testing of recognition edge cases.", "Drove team-wide adoption of AI coding assistants for QA scripting."] },
+          { icon: "⚙️", title: "CI/CD via Jenkins", points: ["Automated the regression suite into the Jenkins pipeline for consistent, repeatable runs.", "Reduced manual retesting time ahead of each release."] },
+        ],
+        impact: [
+          "60% reduction in manual testing effort across UI regression cycles.",
+          "Faster release cycles from an automated, Jenkins-driven regression suite.",
+          "Reusable Page Object layer cut ongoing script maintenance cost.",
+          "Team-wide adoption of AI-assisted scripting for QA workflows.",
+        ],
+        techUsed: ["Selenium WebDriver", "Java", "GitHub Copilot", "Jenkins", "TestNG"],
+        result:
+          "The lesson from Recognizer was that testing an AI feature means testing the failure modes an AI system actually has — biased or thin training data, edge-case lighting/angles, borderline-confidence outputs — not just clicking through the UI. Treating vision-model output like any other deterministic assertion would have given false confidence in exactly the scenarios that matter most for a content-moderation product.",
+      },
     },
     {
       id: "api-integration-suite",
@@ -174,7 +216,27 @@ const SITE_DATA = {
       desc: "services cater to Architects, Engineers, Contractors, and Surveyors worldwide, offering unbeatable affordability and uncompromising quality. Whether  require skilled BIM experts or a complete offshore team,  cost-effective solutions empower  to explore, construct, and manage projects seamlessly.",
       features: ["Rest Assured + Postman collections", "CI/CD gated on every PR", "Third-party service validation", "Database integrity checks"],
       tech: ["Rest Assured", "Postman", "Jenkins", "Maven", "SQL"],
-      githubUrl: "https://github.com/AlokNayak24", demoUrl: "#", caseStudyUrl: "#",
+      githubUrl: "https://github.com/AlokNayak24", demoUrl: "#", caseStudyUrl: "case-study.html?id=api-integration-suite",
+      caseStudy: {
+        overview:
+          "Virtual Building Studio delivers offshore BIM (Building Information Modeling) services to architects, engineers, contractors, and surveyors — a platform where the real product is data integrity moving correctly between design files, project records, and client deliverables. Since the client-facing surface was thin compared to the volume of data flowing through integrations and the database layer, I shifted the testing emphasis toward the API and data layer early, rather than defaulting to UI-first regression the way many QA engineers do out of habit.",
+        features: [
+          { icon: "🔌", title: "API Contract Testing", points: ["Rest Assured suites validating request/response contracts for every integration endpoint.", "Negative-path and boundary testing on payloads, not just the happy path."] },
+          { icon: "📬", title: "Postman Collection Suites", points: ["Maintained shared Postman collections as living documentation and a manual-verification fallback alongside automation.", "Environment-scoped variables so the same collection ran against staging and pre-prod without edits."] },
+          { icon: "🚦", title: "CI/CD Gated on Every PR", points: ["Wired the API suite into Jenkins + Maven so it ran on every pull request, not just nightly.", "Caught contract-breaking changes before merge instead of after deployment."] },
+          { icon: "🗄️", title: "Database Integrity Validation", points: ["SQL-based checks confirming data written through the API matched what the application layer expected to read back.", "Caught silent data-corruption issues that UI-only testing would never surface."] },
+          { icon: "🔗", title: "Third-Party Service Validation", points: ["Verified behavior of dependent third-party services under both normal and degraded conditions.", "Documented failure-mode expectations so the dev team could design proper fallbacks."] },
+        ],
+        impact: [
+          "Contract-breaking changes caught pre-merge instead of in production.",
+          "Reduced production data-integrity incidents through direct SQL-level validation.",
+          "Faster PR turnaround with automated API gating replacing manual sign-off.",
+          "Reliable, documented behavior for every third-party integration point.",
+        ],
+        techUsed: ["Rest Assured", "Postman", "Jenkins", "Maven", "SQL"],
+        result:
+          "This project reinforced a principle I carry into every API-heavy system: the UI is the last place a data problem shows up, not the first. Gating the pipeline on API and database-level checks — rather than waiting for a UI regression to surface a symptom — moved defect detection several steps earlier in the pipeline, where it's far cheaper to fix.",
+      },
     },
     {
       id: "hybrid-bdd-framework",
@@ -183,7 +245,27 @@ const SITE_DATA = {
       desc: "A reusable hybrid automation framework combining data-driven design, BDD-style specs, and the Page Object Model for scalable cross-project reuse.",
       features: ["Data-driven test inputs", "BDD-readable specs", "Page Object Model", "Allure + TestNG reporting"],
       tech: ["Java", "TestNG", "Selenium", "Allure"],
-      githubUrl: "https://github.com/AlokNayak24", demoUrl: "#", caseStudyUrl: "#",
+      githubUrl: "https://github.com/AlokNayak24", demoUrl: "#", caseStudyUrl: "case-study.html?id=hybrid-bdd-framework",
+      caseStudy: {
+        overview:
+          "Across three companies and 8+ years, I kept hitting the same problem at the start of every new engagement: rebuilding automation infrastructure from scratch — locator strategy, reporting, config management, data handling — before a single meaningful test could run. This framework was built to end that cycle: a hybrid Data-Driven + BDD framework designed once and reused across projects, so a new engagement starts with 'write the test' on day one, not 'build the framework' in week three.",
+        features: [
+          { icon: "📊", title: "Data-Driven Test Inputs", points: ["Externalized test data from Excel/JSON sources so the same test logic runs against many data sets.", "New test scenarios added by extending data files, not duplicating code."] },
+          { icon: "📖", title: "BDD-Readable Specs", points: ["Gherkin-style feature files that product owners and business analysts can read without a QA translator.", "Kept test intent documented in the same place the test logic lives, so specs never drift out of sync with code."] },
+          { icon: "🧱", title: "Page Object Model", points: ["Strict separation between locator management and test logic.", "A UI change touches one page object, not every test file that references it."] },
+          { icon: "📈", title: "Allure + TestNG Reporting", points: ["TestNG for suite orchestration, parallelization, and retry policies on flaky steps.", "Allure for stakeholder-readable HTML reports with screenshots on failure, not just a pass/fail console log."] },
+          { icon: "⚙️", title: "Config-Driven Environments", points: ["Environment and browser configuration externalized so the same suite runs locally, in CI, or against staging without code changes."] },
+        ],
+        impact: [
+          "Cut new-project framework bootstrap time from weeks to days by reusing the same core.",
+          "Business-readable BDD specs improved handoff between QA, product, and dev.",
+          "Faster onboarding for new automation engineers joining a project already using the framework.",
+          "Consistent, screenshot-backed reporting across every project that adopted it.",
+        ],
+        techUsed: ["Java", "TestNG", "Selenium WebDriver", "Allure", "Cucumber/BDD", "Maven"],
+        result:
+          "Building this once and reusing it everywhere is the same principle I apply to test design itself: don't rebuild what's already proven to work. The framework has since become the default starting point for new automation work across the teams I've been part of, rather than something reinvented per project.",
+      },
     },
     {
       id: "playwright-practice",
@@ -192,7 +274,26 @@ const SITE_DATA = {
       desc: "A personal project exploring Playwright + TypeScript for cross-browser E2E automation — parallel execution, trace viewer debugging, and visual diffing.",
       features: ["Cross-browser parallel runs", "Trace viewer debugging", "Visual regression diffing", "TypeScript + fixtures"],
       tech: ["Playwright", "TypeScript", "GitHub Actions"],
-      githubUrl: "https://github.com/AlokNayak24", demoUrl: "#", caseStudyUrl: "#",
+      githubUrl: "https://github.com/AlokNayak24", demoUrl: "#", caseStudyUrl: "case-study.html?id=playwright-practice",
+      caseStudy: {
+        overview:
+          "My production automation background is built on Selenium and AccelQ — proven, stable, and what every employer to date has standardized on. This project is a deliberate, honest exploration of Playwright, evaluating it on its own terms rather than assuming it's simply 'the new Selenium': faster execution model, built-in auto-waiting, and debugging tools that Selenium doesn't offer natively. I built this to form my own evidence-based opinion on where Playwright fits before ever proposing a migration on a real project.",
+        features: [
+          { icon: "🎭", title: "Cross-Browser Parallel Execution", points: ["Ran the same suite across Chromium, Firefox, and WebKit in parallel via Playwright's built-in test runner.", "Compared wall-clock execution time directly against an equivalent Selenium suite."] },
+          { icon: "🔍", title: "Trace Viewer Debugging", points: ["Used Playwright's Trace Viewer to step through DOM snapshots, network calls, and console logs per failed test.", "Evaluated how much faster root-causing a flaky failure is versus screenshot-only Selenium reports."] },
+          { icon: "🖼️", title: "Visual Regression Diffing", points: ["Built pixel-diff visual regression checks using Playwright's screenshot comparison API.", "Assessed false-positive rate from minor rendering differences across browsers/OS."] },
+          { icon: "🧩", title: "TypeScript + Fixtures", points: ["Used TypeScript fixtures for reusable setup/teardown and typed page objects.", "Compared maintainability of typed fixtures against the Java POM pattern used in production work."] },
+          { icon: "⚙️", title: "GitHub Actions CI", points: ["Wired the suite into GitHub Actions to evaluate Playwright's CI ergonomics outside a Jenkins environment."] },
+        ],
+        impact: [
+          "Hands-on evaluation of auto-waiting vs. explicit-wait strategies used in production Selenium suites.",
+          "Concrete before/after data on debugging time using Trace Viewer vs. screenshot-only failure reports.",
+          "A documented, evidence-based point of view on where Playwright would fit in future framework decisions.",
+        ],
+        techUsed: ["Playwright", "TypeScript", "GitHub Actions"],
+        result:
+          "This stays labeled a practice project deliberately — it hasn't shipped in production, and I'm not claiming otherwise. But after 8 years standardizing on Selenium, treating a new tool as 'exploring' until it's proven on real, regulated production traffic is the same rigor I'd want applied to any test result: don't call it verified until you've actually verified it.",
+      },
     },
   ],
 

@@ -121,6 +121,18 @@
     $("#projectsGrid").innerHTML = SITE_DATA.projects
       .map((p, i) => {
         const isReal = p.badge.startsWith("Real");
+        const hasGithub = !!p.githubUrl && p.githubUrl !== "#";
+        const hasDemo = !!p.demoUrl && p.demoUrl !== "#";
+        const hasCaseStudy = !!p.caseStudy;
+        const githubBtn = hasGithub
+          ? `<a class="icon-btn magnetic" href="${p.githubUrl}" target="_blank" rel="noopener" title="GitHub">${svgIcons.github}</a>`
+          : `<span class="icon-btn" style="opacity:.35" title="Private repository">${svgIcons.github}</span>`;
+        const demoBtn = hasDemo
+          ? `<a class="icon-btn magnetic" href="${p.demoUrl}" target="_blank" rel="noopener" title="Live Demo">${svgIcons.arrow}</a>`
+          : `<span class="icon-btn" style="opacity:.35" title="Private/enterprise project — no public demo">${svgIcons.arrow}</span>`;
+        const caseStudyBtn = hasCaseStudy
+          ? `<a class="icon-btn magnetic" href="case-study.html?id=${p.id}" title="Case Study">📄</a>`
+          : `<span class="icon-btn" style="opacity:.35" title="Case study coming soon">📄</span>`;
         return `
         <div class="project-card glass tilt-card reveal-up" style="transition-delay:${(i % 4) * 0.08}s">
           <div class="project-art" style="background:${ART_GRADIENTS[i % ART_GRADIENTS.length]}">
@@ -135,9 +147,9 @@
             <ul class="project-features">${p.features.map((f) => `<li>${f}</li>`).join("")}</ul>
             <div class="tech-tags">${p.tech.map((t) => `<span>${t}</span>`).join("")}</div>
             <div class="project-actions">
-              <a class="icon-btn magnetic" href="${p.githubUrl}" target="_blank" rel="noopener" title="GitHub">${svgIcons.github}</a>
-              <a class="icon-btn magnetic" href="${p.demoUrl}" title="Live Demo">${svgIcons.arrow}</a>
-              <a class="icon-btn magnetic" href="${p.caseStudyUrl}" title="Case Study">📄</a>
+              ${githubBtn}
+              ${demoBtn}
+              ${caseStudyBtn}
             </div>
           </div>
         </div>`;
