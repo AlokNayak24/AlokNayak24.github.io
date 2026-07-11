@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alok Kumar Nayak — Senior QA Automation Engineer</title>
+    <meta name="description" content="Alok Kumar Nayak — Senior QA Automation Engineer with 8+ years building AI-powered test automation, Selenium/AccelQ frameworks, and CI/CD pipelines." />
+    <meta name="theme-color" content="#050816" />
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧪</text></svg>" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="loading">
+    <!-- ============ PAGE LOADER ============ -->
+    <div class="loader" id="loader">
+      <div class="loader-mark">ALOK_NAYAK // PORTFOLIO</div>
+      <div class="loader-bar"><span id="loaderFill"></span></div>
+      <div class="loader-pct" id="loaderPct">0%</div>
+    </div>
+
+    <!-- ============ READING PROGRESS ============ -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- ============ BACKDROP ============ -->
+    <canvas id="particle-canvas"></canvas>
+    <div class="glow-orb o1"></div>
+    <div class="glow-orb o2"></div>
+    <div class="glow-orb o3"></div>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar" id="navbar">
+      <div class="container">
+        <a href="#hero" class="logo"><span class="dot"></span>ALOK_NAYAK</a>
+
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#stack" class="nav-link">Stack</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#ai-tools" class="nav-link">AI Tools</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#certifications" class="nav-link">Certs</a></li>
+          <li><a href="#blog" class="nav-link">Writing</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="kbd-hint" id="cmdkTrigger" aria-label="Open command palette">
+            Search <kbd>⌘</kbd><kbd>K</kbd>
+          </button>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="resume/Alok_Kumar_Nayak_Resume.pdf" download class="btn btn-primary btn-sm">Resume ↓</a>
+          <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" class="mnav">About</a>
+      <a href="#stack" class="mnav">Stack</a>
+      <a href="#projects" class="mnav">Projects</a>
+      <a href="#ai-tools" class="mnav">AI Tools</a>
+      <a href="#experience" class="mnav">Experience</a>
+      <a href="#certifications" class="mnav">Certs</a>
+      <a href="#blog" class="mnav">Writing</a>
+      <a href="#contact" class="mnav">Contact</a>
+    </div>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <canvas id="hero-three"></canvas>
+      <div class="container">
+        <div class="hero-status-bar">
+          <span><span class="pulse-dot"></span>STATUS: <span id="heroStatus">AVAILABLE FOR WORK</span></span>
+          <span>AHMEDABAD, INDIA</span>
+          <span>PORTFOLIO_V.2026</span>
+        </div>
+
+        <div class="hero-grid">
+          <div class="hero-left">
+            <div class="eyebrow">Senior QA Automation Engineer</div>
+            <h1 class="hero-title">
+              <span class="line"><span>ALOK</span></span>
+              <span class="line"><span class="text-gradient">KUMAR NAYAK</span></span>
+            </h1>
+
+            <div class="hero-typing">
+              <span id="typingText"></span><span class="cursor-blink"></span>
+            </div>
+
+            <p class="hero-desc">
+              8+ years engineering reliability into insurance, fintech-adjacent, and enterprise platforms —
+              building AI-powered testing agents, hybrid Selenium/AccelQ frameworks, and CI/CD pipelines
+              that turn regressions extinct before they ship.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary magnetic">View Portfolio <span class="icon-arrow">↗</span></a>
+              <a href="resume/Alok_Kumar_Nayak_Resume.pdf" download class="btn btn-secondary magnetic">Download Resume ↓</a>
+              <a href="#contact" class="btn btn-secondary magnetic">Contact Me</a>
+            </div>
+
+            <div class="hero-socials" id="heroSocials"></div>
+          </div>
+
+          <div class="hero-portrait">
+            <div class="portrait-ring">
+              <div class="portrait-inner">
+                <img src="img/alok.jpeg" alt="Alok Kumar Nayak" />
+              </div>
+            </div>
+            <div class="portrait-badge role glass">SDET / AI TESTING</div>
+            <div class="portrait-badge live glass">● LIVE</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-cue"><span>SCROLL</span><span class="line"></span></div>
+    </section>
+
+    <!-- Tech Marquee -->
+    <div class="tech-marquee">
+      <div class="marquee-track" id="marqueeTrack"></div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="reveal-up">
+            <div class="eyebrow">About</div>
+            <h2 class="section-title">The Engineer<br /><span class="text-gradient">/Tester.</span></h2>
+
+            <div class="about-meta-card glass" style="margin-top: 32px;">
+              <div class="meta-row"><p>Location</p><h6>Ahmedabad, India</h6></div>
+              <div class="meta-row"><p>Status</p><h6 class="available">Available</h6></div>
+              <div class="meta-row"><p>Experience</p><h6>8+ Years</h6></div>
+              <div class="meta-row"><p>Email</p><h6>aloknayak2013@gmail.com</h6></div>
+            </div>
+          </div>
+
+          <div class="reveal-up">
+            <p class="about-tagline">Quality isn't a phase — it's an architecture.</p>
+            <div class="about-text" id="aboutParagraphs"></div>
+
+            <div class="principles" id="principlesGrid"></div>
+          </div>
+        </div>
+
+        <div class="stats-grid" id="statsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ TECH STACK ============ -->
+    <section class="stack-section" id="stack">
+      <div class="container">
+        <div class="section-head reveal-up">
+          <div class="eyebrow">Tech Stack</div>
+          <h2 class="section-title">The Toolkit.</h2>
+          <p class="desc">Verified, production-used tools from 8+ years in the field — plus what I'm exploring next.</p>
+        </div>
+
+        <div class="stack-grid" id="stackGrid"></div>
+        <div class="exploring-wrap glass reveal-up">
+          <h4>Also Exploring</h4>
+          <div class="exploring-list" id="exploringList"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-head reveal-up">
+          <div class="eyebrow">Selected Work</div>
+          <h2 class="section-title">Projects.</h2>
+          <p class="desc">Real production systems, plus a couple of personal practice frameworks — clearly labeled.</p>
+        </div>
+
+        <div class="bento-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ AI TOOLS BUILT BY ME ============ -->
+    <section class="ai-tools-section" id="ai-tools">
+      <div class="container">
+        <div class="section-head reveal-up">
+          <div class="eyebrow">Built with AI</div>
+          <h2 class="section-title">AI Tools I've Built.</h2>
+          <p class="desc">Side tools and apps I've vibe-coded using Claude, ChatGPT, Copilot, and other AI coding assistants.</p>
+        </div>
+
+        <div class="ai-tools-grid" id="aiToolsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="experience-section" id="experience">
+      <div class="container">
+        <div class="section-head reveal-up">
+          <div class="eyebrow">Execution Log</div>
+          <h2 class="section-title">Experience.</h2>
+        </div>
+
+        <div class="timeline" id="timelineList"></div>
+
+        <div class="education-row glass reveal-up" id="educationRow"></div>
+      </div>
+    </section>
+
+    <!-- ============ CERTIFICATIONS ============ -->
+    <section class="cert-section" id="certifications">
+      <div class="container">
+        <div class="section-head reveal-up">
+          <div class="eyebrow">Credentials</div>
+          <h2 class="section-title">Certifications.</h2>
+        </div>
+        <div class="cert-grid" id="certGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ BLOG ============ -->
+    <section class="blog-section" id="blog">
+      <div class="container">
+        <div class="section-head reveal-up">
+          <div class="eyebrow">Writing</div>
+          <h2 class="section-title">Notes &amp; Essays.</h2>
+          <p class="desc">Thinking on AI-assisted testing, automation architecture, and shipping with confidence.</p>
+        </div>
+        <div class="blog-grid" id="blogGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ LIVE FEED DASHBOARD ============ -->
+    <section class="livefeed-section" id="livefeed">
+      <div class="container">
+        <div class="section-head reveal-up">
+          <div class="eyebrow">Live Dashboard</div>
+          <h2 class="section-title">Real-Time Signals.</h2>
+        </div>
+
+        <div class="livefeed-grid" id="livefeedGrid">
+          <div class="livefeed-tile glass">
+            <div class="lf-label">Local Time (IST)</div>
+            <div class="lf-value" id="liveClock">--:--:--</div>
+            <div class="lf-sub">Ahmedabad, India</div>
+          </div>
+          <div class="livefeed-tile glass">
+            <div class="lf-label">Weather</div>
+            <div class="lf-value" id="liveWeather">—</div>
+            <div class="lf-sub" id="liveWeatherSub">Loading…</div>
+          </div>
+          <div class="livefeed-tile glass">
+            <div class="lf-label">Visitors</div>
+            <div class="lf-value" id="visitorCount">—</div>
+            <div class="lf-sub">Your visits</div>
+          </div>
+          <div class="livefeed-tile glass">
+            <div class="lf-label">GitHub Repos</div>
+            <div class="lf-value" id="repoCount">—</div>
+            <div class="lf-sub"><a href="https://github.com/AlokNayak24" target="_blank" rel="noopener">@AlokNayak24 ↗</a></div>
+          </div>
+        </div>
+
+        <div class="livefeed-detail">
+          <div class="gh-repos-card glass">
+            <h4>Latest Repositories</h4>
+            <div id="repoList"><div class="gh-repo-row"><span class="repo-name">Loading…</span></div></div>
+          </div>
+          <div class="gh-graph-card glass">
+            <h4>Contribution Graph</h4>
+            <img src="https://ghchart.rshah.org/00E5FF/AlokNayak24" alt="GitHub contribution graph for AlokNayak24" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="news-card glass reveal-up" style="margin-top: 24px;">
+          <h4>Tech Pulse — Top Hacker News</h4>
+          <div id="newsList"><div class="news-row">Loading…</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-head reveal-up">
+          <div class="eyebrow">Peer Reviews</div>
+          <h2 class="section-title">What People <span class="text-gradient">Say.</span></h2>
+        </div>
+      </div>
+      <div class="testi-track" id="testiTrack"></div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-head reveal-up">
+          <div class="eyebrow">Initiate Contact</div>
+          <h2 class="section-title">Hire <span class="text-gradient">Me.</span></h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-card glass reveal-up">
+            <div class="availability-badge"><span class="pulse-dot"></span> Available for Work</div>
+            <p style="color: var(--text-2); margin-bottom: 24px;">
+              Looking for a QA Automation Engineer who treats test code like product code and knows how to
+              put AI to work on your test suite? Let's talk.
+            </p>
+
+            <div class="contact-item">
+              <div class="ci-icon">✉</div>
+              <div><span class="label">Email</span><p>aloknayak2013@gmail.com</p></div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon">☎</div>
+              <div><span class="label">Phone</span><p>+91-8328890394</p></div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon">⌖</div>
+              <div><span class="label">Location</span><p>Ahmedabad, Gujarat, India</p></div>
+            </div>
+
+            <div class="map-panel">
+              <div class="map-grid"></div>
+              <div class="map-pin"><div class="pin-dot"></div><div class="pin-label">Ahmedabad, IN</div></div>
+            </div>
+          </div>
+
+          <div class="contact-form-card glass reveal-up">
+            <form id="contactForm">
+              <div class="form-row">
+                <div class="field">
+                  <input type="text" id="cName" placeholder="Name" required />
+                  <label>Name</label>
+                </div>
+                <div class="field">
+                  <input type="email" id="cEmail" placeholder="Email" required />
+                  <label>Email</label>
+                </div>
+              </div>
+              <div class="field">
+                <input type="text" id="cSubject" placeholder="Subject" required />
+                <label>Subject</label>
+              </div>
+              <div class="field">
+                <textarea id="cMessage" placeholder="Message" required></textarea>
+                <label>Message</label>
+              </div>
+              <button type="submit" class="btn btn-primary send-btn">
+                <span class="spinner"></span>
+                <span class="btn-label">Send Message ↗</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <h3>Built with <span class="text-gradient">precision.</span></h3>
+            <p>Crafted by Alok Kumar Nayak. Hand-coded, no template. Tested in Chrome, Firefox, Safari & your obscure browser too.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Social</h4>
+            <a href="https://github.com/AlokNayak24" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/alok-kumar-nayak" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:aloknayak2013@gmail.com">Email</a>
+          </div>
+          <div class="footer-col">
+            <h4>Misc</h4>
+            <a href="resume/Alok_Kumar_Nayak_Resume.pdf" download>Download Resume</a>
+            <a href="#hero" id="footerTop">Back to Top</a>
+            <a href="#contact">Get in Touch</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>© 2026 Alok Kumar Nayak — All Rights Reserved</div>
+          <div class="signal-blocks">SIGNAL_GOOD <span>■■■■</span>□</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============ FLOATING DOCK ============ -->
+    <nav class="dock" id="dock"></nav>
+
+    <!-- ============ BACK TO TOP / MUSIC ============ -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+    <button class="music-toggle" id="musicToggle" aria-label="Toggle ambient sound">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+
+    <!-- ============ AI CHAT WIDGET ============ -->
+    <button class="chat-fab" id="chatFab" aria-label="Open chat assistant">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    </button>
+    <div class="chat-panel glass" id="chatPanel">
+      <div class="chat-head">
+        <h5>Ask about Alok</h5>
+        <span>Rule-based assistant · not a live LLM</span>
+      </div>
+      <div class="chat-messages" id="chatMessages"></div>
+      <div class="chat-input-row">
+        <input type="text" id="chatInput" placeholder="Ask a question…" />
+        <button id="chatSend" aria-label="Send">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- ============ COMMAND PALETTE ============ -->
+    <div class="cmdk-overlay" id="cmdkOverlay">
+      <div class="cmdk-panel glass">
+        <div class="cmdk-input-row">
+          <span>⌘K</span>
+          <input type="text" id="cmdkInput" placeholder="Jump to a section, or run a command…" />
+        </div>
+        <div class="cmdk-list" id="cmdkList"></div>
+      </div>
+    </div>
+
+    <!-- ============ TOASTS ============ -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- ============ LIGHTBOX (certificate viewer) ============ -->
+    <div class="lightbox-overlay" id="lightboxOverlay">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+      <img id="lightboxImg" src="" alt="Certificate full view" />
+    </div>
+
+    <!-- SVG defs for gradient stroke rings -->
+    <svg width="0" height="0" style="position:absolute">
+      <defs>
+        <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#00E5FF" />
+          <stop offset="100%" stop-color="#7C3AED" />
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <!-- ============ SCRIPTS ============ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+
+    <script src="javascript/data.js"></script>
+    <script src="javascript/main.js"></script>
+    <script src="javascript/widgets.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+/* ==========================================================================
+   CASE STUDY DETAIL PAGE — extends the tokens/components in style.css
+   ========================================================================== */
+body { cursor: auto; }
+
+.cs-wrap { padding: calc(var(--nav-h) + 60px) 0 100px; min-height: 70vh; }
+
+.cs-loading, .cs-notfound { color: var(--text-2); text-align: center; padding: 80px 0; }
+
+.cs-header { max-width: 760px; margin-bottom: 56px; }
+.cs-header .status-badge { margin-bottom: 20px; }
+.cs-header h1 { font-size: clamp(30px, 4vw, 46px); margin-bottom: 18px; }
+.cs-header .cs-lede { font-size: 18px; color: var(--text-2); }
+.cs-header .built-with { margin-top: 22px; }
+
+.cs-section { margin-bottom: 64px; }
+.cs-section h2 {
+  font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent);
+  margin-bottom: 24px;
+}
+
+.cs-feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.cs-feature-card { padding: 26px; }
+.cs-feature-card .cs-feature-icon { font-size: 26px; margin-bottom: 14px; }
+.cs-feature-card h4 { font-size: 16px; margin-bottom: 12px; }
+.cs-feature-card ul li { font-size: 13.5px; color: var(--text-2); padding: 5px 0 5px 20px; position: relative; }
+.cs-feature-card ul li::before { content: "→"; position: absolute; left: 0; color: var(--accent); }
+
+.cs-impact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.cs-impact-item {
+  display: flex; align-items: flex-start; gap: 12px; padding: 18px 22px;
+}
+.cs-impact-item .cs-check { color: var(--success); font-size: 18px; flex-shrink: 0; }
+
+.cs-tech-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+.cs-tech-tags span {
+  padding: 9px 16px; border-radius: var(--radius-pill);
+  background: var(--card-hover); border: 1px solid var(--border); font-size: 14px; font-weight: 500;
+}
+
+.cs-result { padding: 36px; text-align: left; border-color: rgba(0, 229, 255, 0.25); }
+.cs-result .cs-result-label { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+.cs-result p { font-size: 17px; line-height: 1.7; }
+
+.cs-cta { text-align: center; padding-top: 20px; }
+
+@media (max-width: 900px) {
+  .cs-feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .cs-impact-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .cs-feature-grid { grid-template-columns: 1fr; }
+}

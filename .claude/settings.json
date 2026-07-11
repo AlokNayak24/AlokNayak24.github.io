@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm -v)",
+      "Bash(chromium-cli --help)",
+      "Bash(cd /Users/alokkumarnayak/Downloads/alok *)",
+      "Read(//tmp/**)",
+      "Bash(curl -v --max-time 8 \"https://api.countapi.xyz/hit/aloknayak-portfolio/visits\")",
+      "Bash(curl -s \"https://api.github.com/users/AlokNayak24/repos?sort=updated&per_page=5\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(len\\(d\\)\\); [print\\(r.get\\('name'\\), r.get\\('language'\\), r.get\\('stargazers_count'\\)\\) for r in d]\")"
+    ]
+  }
+}
