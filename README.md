@@ -26,7 +26,7 @@ Most engineering portfolios are a resume pasted into a template. This one is bui
 **deliberately, with an eye for edge cases, and with real production data** — every stat, role, and
 certification here comes straight from an 8+ year QA/AI-automation career, not filler copy.
 
-The build constraint was the point: no Node, no npm, no bundler on the target machine — so the entire
+The build constraint was the point: no Node, no npm, no bundler on the target machine — so the entire 
 site had to be production-grade using nothing but a browser's native capabilities. That constraint forced
 disciplined architecture: a single data layer, render-on-load components, and hand-rolled interaction
 systems instead of pulling in a library for each one.
