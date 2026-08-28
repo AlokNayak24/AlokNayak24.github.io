@@ -682,6 +682,136 @@ const SITE_DATA = {
     "Built an enterprise-grade AI-powered QA platform that automates end-to-end test case generation, intelligently validates coverage through a multi-agent review system, leverages RAG and MCP for project-aware context, and seamlessly publishes approved test cases into Zephyr, significantly improving QA efficiency, consistency, and release readiness.",
 },
     },
+    {
+      id: "dyad-insightboard",
+      title: "Dyad InsightBoard — AI-Powered QA Operating System",
+      status: "Production",
+      desc: "An AI-powered QA Operating System that turns Jira and Zephyr Scale data into QA analytics, release-readiness scoring, and AI-generated executive insights. QA identity is tracked through a Jira \"QA Label\" custom field rather than assignee, so an engineer's contribution reflects who tested the work, not who it was assigned to. Built as a Next.js + NestJS monorepo with a provider-agnostic Jira sync pipeline, role-based access control, and Claude-powered executive briefings.",
+      builtWith: ["Claude Code", "Next.js 14", "NestJS", "Anthropic Claude API"],
+      tech: ["TypeScript", "Prisma", "PostgreSQL", "Redis", "BullMQ", "Tailwind CSS"],
+      placeholder: false,
+      caseStudy: {
+        overview:
+          "Designed and built Dyad InsightBoard, a Phase 1 vertical slice of an AI-powered QA Operating System. It syncs Jira and Zephyr Scale data into Postgres and turns it into release-readiness scoring, bug and sprint intelligence, a QA performance leaderboard, and AI-generated executive briefings — built on a Next.js 14 / NestJS 10 monorepo with a provider-agnostic Jira integration that switches cleanly between a deterministic mock dataset and a live Jira Cloud connection.",
+        features: [
+          {
+            icon: "📊",
+            title: "Executive Dashboard",
+            points: [
+              "15 config-driven KPI cards — QA Health Score, Release Readiness, Sprint Progress, Automation Coverage, AI Risk Score, and more — many clickable into filtered ticket drill-downs.",
+              "AI-generated executive briefing with headline, summary, highlights, risks, and a recommendation.",
+              "Product Team, Implementation, and Automation share one parameterized team dashboard view, since Jira itself has no native \"team\" concept.",
+            ],
+          },
+          {
+            icon: "🗂️",
+            title: "Daily Board",
+            points: [
+              "Rebuilds every gadget of the real Jira \"QA-Overall_Status\" dashboard from synced Postgres data — never a live Jira JQL call — so it renders identically regardless of the viewer's Jira permissions.",
+              "Every chart, legend slice, and table column is independently filterable, with client-side pagination and a CSV export that respects every active filter.",
+              "Pod Details breaks out one pie chart per real Squad value present in the data, with an explicit custom sort order instead of a hardcoded pod list.",
+            ],
+          },
+          {
+            icon: "🐞",
+            title: "Bug Intelligence",
+            points: [
+              "Open/closed/reopened counts, priority and status breakdowns, and an aging bucket for open bugs.",
+              "Escaped/production-defect counts, duplicate and recurring-bug detection, and root-cause breakdown.",
+              "Per-sprint opened-vs-closed trend plus a next-period forecast.",
+            ],
+          },
+          {
+            icon: "🏃",
+            title: "Sprint Intelligence",
+            points: [
+              "Live sprint health: completion %, velocity across the last 4 closed sprints plus the current one, and a burndown derived from ticket resolution timestamps.",
+              "Blocked-story count, testing progress %, carry-over prediction, and an overall health score.",
+              "Target sprint resolves to the explicit filter, else the project's active sprint, else its most recently started sprint.",
+            ],
+          },
+          {
+            icon: "🏆",
+            title: "QA Analytics Leaderboard",
+            points: [
+              "Ranks QA engineers by Jira QA Label across total/testing/completed/pending/blocked/hotfix/regression ticket counts and bugs logged.",
+              "Quality Score starts at 100 and is penalized only for reopened tickets, weighted 1.5×.",
+              "AI Performance Score blends quality (50%), productivity (30%), and blocked ratio (20%) into one transparent, formula-driven score.",
+            ],
+          },
+          {
+            icon: "✅",
+            title: "Test Cases (Zephyr Scale)",
+            points: [
+              "Test case and cycle coverage per team, with pass/fail/blocked/not-executed breakdowns.",
+              "Paginated drill-down execution lists, synced independently of the Jira ticket pipeline.",
+            ],
+          },
+          {
+            icon: "🔎",
+            title: "Jira Filters",
+            points: [
+              "The one place in the app that calls Jira JQL live by design — browses the account's own saved Filters and Dashboards.",
+              "Pie-chart breakdowns plus a filterable, paginated Jira-style issue table.",
+            ],
+          },
+          {
+            icon: "📅",
+            title: "Release Calendar",
+            points: [
+              "A deterministic 2026 release calendar generated client-side from the org's documented cadence — weekly sprints, monthly service packs, Windows patching windows, and quarterly releases.",
+            ],
+          },
+          {
+            icon: "🔐",
+            title: "Auth & Roles",
+            points: [
+              "Email/password login with optional email-based 2FA (5-minute TTL) and rotating JWT refresh tokens stored hashed, not reused.",
+              "Five roles — Admin, QA Manager, QA Lead, QA Engineer, Viewer — enforced end-to-end via a RolesGuard, from user management down to read-only access.",
+            ],
+          },
+          {
+            icon: "🔌",
+            title: "Jira & Zephyr Sync Engine",
+            points: [
+              "Provider-agnostic sync: mock and real Jira providers implement the same interface, so every downstream page is provider-agnostic.",
+              "Six custom fields — QA Label, Deployment Type, Squad, Release Target, Sprint, Environment — resolve by human-readable name to their real Jira custom field IDs.",
+              "A parallel Zephyr Scale integration handles per-ticket test-case-count backfill plus a fuller test case/cycle/execution sync, scoped per team.",
+            ],
+          },
+        ],
+        impact: [
+          "Replaced ad-hoc Jira dashboards with one release-readiness and QA health view shared across Product, Implementation, and Automation teams.",
+          "Eliminated Jira-permission inconsistencies on the Daily Board by rendering entirely from synced data instead of live gadgets.",
+          "Automated executive-level reporting with AI-generated briefings instead of manual status write-ups.",
+          "Reduced bug-backlog blind spots through automated aging, duplicate, and root-cause detection.",
+          "Gave every QA engineer a transparent, formula-driven quality and performance score.",
+          "Unified Jira and Zephyr Scale data into one release-readiness signal instead of two disconnected tools.",
+        ],
+        techUsed: [
+          "Next.js 14",
+          "React 18",
+          "TypeScript",
+          "Tailwind CSS",
+          "Recharts",
+          "Zustand",
+          "TanStack Query",
+          "Radix UI",
+          "Framer Motion",
+          "NestJS 10",
+          "Prisma 5",
+          "PostgreSQL 16",
+          "Redis 7",
+          "BullMQ",
+          "JWT Authentication",
+          "Anthropic Claude SDK",
+          "Turborepo",
+          "Docker",
+        ],
+        result:
+          "Shipped a Phase 1 vertical slice of an AI-powered QA Operating System, live in production, that turns raw Jira and Zephyr Scale data into release-readiness scoring, bug and sprint intelligence, a QA leaderboard, and AI-generated executive briefings — with Copilot, Release Center, report export/scheduling, and outbound notifications scoped for a later phase.",
+      },
+    },
   ],
 
   testimonials: [
