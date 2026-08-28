@@ -133,6 +133,7 @@ const SITE_DATA = {
     { name: "New Rookie Award – Excellence", issuer: "Dyad Tech", year: "2024", verifyUrl: "#", placeholder: true, image: "img/certificates/Rookie Award.jpeg" },
     { name: "Claude Code in Action", issuer: "Anthropic", year: "2026", verifyUrl: "https://verify.skilljar.com/c/6qq4jbqqr2sj", placeholder: false, image: "img/certificates/Claude code Action.jpeg" },
     { name: "Claude code 101", issuer: "Anthropic", year: "2026", verifyUrl: "https://verify.skilljar.com/c/ivcf7numby96", placeholder: false, image: "img/certificates/Claude code 101.jpeg" },
+    { name: "Claude 101", issuer: "Anthropic", year: "2026", verifyUrl: "#", placeholder: true, image: "img/certificates/Claude 101.png" },
     { name: "ESET Security Awareness", issuer: "ESET", year: "2025", verifyUrl: "#", placeholder: true, image: "img/certificates/ESET Security Awareness.jpeg" },
     { name: "Generative AI", issuer: "Skill Nation", year: "2025", verifyUrl: "#", placeholder: true, image: "img/certificates/Generative AI.jpeg" },
     // { name: "ESET General Cybersecurity", issuer: "ESET", year: "2025", verifyUrl: "#", placeholder: true, image: "" },
