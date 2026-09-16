@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, MapPin, Mail, Phone, Check } from "lucide-react";
+import { Send, MapPin, Mail, Phone, Github, Check } from "lucide-react";
 import { Input } from "../lightswind/input";
 import { Textarea } from "../lightswind/textarea";
 import { Button } from "../lightswind/button";
 import { siteData } from "../../data/siteData";
 
 export const ContactSection = () => {
-  const { identity } = siteData;
+  const { identity, socials } = siteData;
+  const github = socials.find((s) => s.icon === "github");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -64,6 +65,19 @@ export const ContactSection = () => {
                 </div>
                 <span className="font-medium">{identity.location}</span>
               </div>
+              {github && (
+                <a
+                  href={github.url}
+                  target="_blank"
+                  rel="noopener"
+                  className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group"
+                >
+                  <div className="w-12 h-12 rounded-full glass-panel flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Github className="w-5 h-5" />
+                  </div>
+                  <span className="font-medium">github.com/AlokNayak24</span>
+                </a>
+              )}
             </div>
           </div>
 
