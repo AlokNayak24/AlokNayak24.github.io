@@ -91,7 +91,9 @@ export const Footer = () => {
           </div>
 
           <div className="flex items-center gap-1.5 font-medium text-center md:text-right">
-            <span style={{ fontWeight: 500, color: "inherit" }}>{`© ${new Date().getFullYear()} ${identity.name}. Crafted with`}</span>
+            <span>© {new Date().getFullYear()}</span>
+            <span className="font-extrabold text-gradient-primary">{identity.name}.</span>
+            <span>Crafted with</span>
             <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500 inline-block" />
           </div>
         </div>
