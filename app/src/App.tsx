@@ -9,6 +9,7 @@ import { AiToolsSection } from "./components/AiToolsSection/AiToolsSection";
 import { ExperienceTimeline } from "./components/ExperienceSection/ExperienceTimeline";
 import { EducationSection } from "./components/EducationSection/EducationSection";
 import { CertificationsSection } from "./components/CertificationsSection/CertificationsSection";
+import { CompletionBadgesSection } from "./components/CompletionBadgesSection/CompletionBadgesSection";
 import { BlogSection } from "./components/BlogSection/BlogSection";
 import { LiveFeedSection } from "./components/LiveFeedSection/LiveFeedSection";
 import TestimonialsSection from "./components/TestimonialsSection/TestimonialsSection";
@@ -97,6 +98,7 @@ function App() {
           <ExperienceTimeline />
           <EducationSection />
           <CertificationsSection />
+          <CompletionBadgesSection />
           <BlogSection />
           <LiveFeedSection />
           <TestimonialsSection />

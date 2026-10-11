@@ -137,6 +137,14 @@ export interface ChatFAQ {
   answer: string;
 }
 
+export interface CompletionBadge {
+  title: string;
+  issued: string;
+  icon: string;
+  image: string;
+  verifyUrl: string;
+}
+
 export interface SiteData {
   identity: Identity;
   titles: string[];
@@ -147,6 +155,7 @@ export interface SiteData {
   experience: Experience[];
   education: Education[];
   certifications: Certification[];
+  completionBadges: CompletionBadge[];
   projects: Project[];
   aiTools: AiTool[];
   testimonials: Testimonial[];
@@ -285,6 +294,86 @@ export const siteData: SiteData = {
     { name: "Claude 101", issuer: "Anthropic", year: "2026", verifyUrl: "https://verify.skilljar.com/c/jn4dqcsfb2sy", placeholder: true, image: "img/certificates/Claude 101.png" },
     { name: "ESET Security Awareness", issuer: "ESET", year: "2025", verifyUrl: "#", placeholder: true, image: "img/certificates/ESET Security Awareness.jpeg" },
     { name: "Generative AI", issuer: "Skill Nation", year: "2025", verifyUrl: "#", placeholder: true, image: "img/certificates/Generative AI.jpeg" },
+  ],
+
+  completionBadges: [
+    {
+      title: "Claude with Amazon Bedrock",
+      issued: "October 11, 2026",
+      icon: "cloud",
+      image: "img/certificates/claude-academy-badge-claude-with-amazon-bedrock.png",
+      verifyUrl: "https://academy.claude.com/verify/671531c4df152d25cf793fd65af62bc9",
+    },
+    {
+      title: "Model Context Protocol: Advanced topics",
+      issued: "October 10, 2026",
+      icon: "network",
+      image: "img/certificates/claude-academy-badge-model-context-protocol-advanced-topics.png",
+      verifyUrl: "https://academy.claude.com/verify/efbb1560cc2b7725d82eb0284e155873",
+    },
+    {
+      title: "Introduction to Claude Tag",
+      issued: "October 10, 2026",
+      icon: "messages",
+      image: "img/certificates/claude-academy-badge-introduction-to-claude-tag.png",
+      verifyUrl: "https://academy.claude.com/verify/5498fe0016733bd52c7fe0c2088d0c87",
+    },
+    {
+      title: "Introduction to Model Context Protocol",
+      issued: "October 10, 2026",
+      icon: "building",
+      image: "img/certificates/claude-academy-badge-introduction-to-model-context-protocol.png",
+      verifyUrl: "https://academy.claude.com/verify/08d0c97ccbf8fe5e51843c4e2d23bf71",
+    },
+    {
+      title: "Claude Platform 101",
+      issued: "October 10, 2026",
+      icon: "cog",
+      image: "img/certificates/claude-academy-badge-claude-platform-101.png",
+      verifyUrl: "https://academy.claude.com/verify/c3aa10906713e2b42d792333569e74fe",
+    },
+    {
+      title: "Building with the Claude API",
+      issued: "October 10, 2026",
+      icon: "blocks",
+      image: "img/certificates/claude-academy-badge-building-with-the-claude-api.png",
+      verifyUrl: "https://academy.claude.com/verify/966a07bd8b3958d5a0ca7f954e5961f2",
+    },
+    {
+      title: "Claude Code in action",
+      issued: "October 10, 2026",
+      icon: "code",
+      image: "img/certificates/claude-academy-badge-claude-code-in-action.png",
+      verifyUrl: "https://academy.claude.com/verify/2dc45aef3c30cc5e91910c0d1d151b21",
+    },
+    {
+      title: "AI capabilities and limitations",
+      issued: "October 10, 2026",
+      icon: "scale",
+      image: "img/certificates/claude-academy-badge-ai-capabilities-and-limitations.png",
+      verifyUrl: "https://academy.claude.com/verify/51a4200dd52df72006309ea4f01bd372",
+    },
+    {
+      title: "Introduction to Claude Cowork",
+      issued: "October 10, 2026",
+      icon: "sparkles",
+      image: "img/certificates/claude-academy-badge-introduction-to-claude-cowork.png",
+      verifyUrl: "https://academy.claude.com/verify/569cd95d396310f2517567e6f5e632d1",
+    },
+    {
+      title: "Claude Code 101",
+      issued: "October 10, 2026",
+      icon: "code",
+      image: "img/certificates/claude-academy-badge-claude-code-101.png",
+      verifyUrl: "https://academy.claude.com/verify/3fd5bf6f1929fe72f5c7eb4c077b9b08",
+    },
+    {
+      title: "Claude 101",
+      issued: "September 30, 2026",
+      icon: "message",
+      image: "img/certificates/claude-academy-badge-claude-101.png",
+      verifyUrl: "https://academy.claude.com/verify/be7897c3735a885b9111931e6d48101c",
+    },
   ],
 
   projects: [
